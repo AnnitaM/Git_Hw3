@@ -13,11 +13,11 @@
 # 4 -> 1 2 3 4
 # 9
 
-# количество кустов
-number_of_bushes = int(input("Enter the number of bushes in the garden: "))
-# ягоды с каждого куста
 bushes = list(map(int, input().split()))
-# ягоды собранные с каждой тройки кустов
-berrys = []
-
+max_berries = 0
+for i in range(-2, len(bushes) - 2):
+    sum_berries = sum((bushes[i], bushes[i+1], bushes[i+2]))
+    if sum_berries > max_berries:
+        max_berries = sum_berries
+print(max_berries)
 
