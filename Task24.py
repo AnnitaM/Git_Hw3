@@ -19,5 +19,8 @@ number_of_bushes = int(input("Enter the number of bushes in the garden: "))
 bushes = list(map(int, input().split()))
 # ягоды собранные с каждой тройки кустов
 berrys = []
+for i in range(-2, len(bushes)-2):
+  berrys.append(bushes[i] + bushes[i+1] + bushes[i+2])
+ print(max(berrys))
 
 
